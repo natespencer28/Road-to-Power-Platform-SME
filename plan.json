@@ -1,0 +1,708 @@
+{
+  "WEEKS": [
+    {
+      "n": 0,
+      "phase": 0,
+      "title": "Setup",
+      "aka": "Do this before Week 1",
+      "intent": "Two or three hours. Half the frustration in month one is environment problems, not concept problems.",
+      "build": [
+        "Sign up for the Power Apps Developer Plan — free, full Dataverse sandbox for all 24 weeks",
+        "Create DEV, TEST and PROD environments if your tenant allows it",
+        "Sign in to Microsoft Learn so module progress tracks",
+        "Set up a notes repo — OneNote, Obsidian or GitHub",
+        "Pick your spine project and name it",
+        "Book PL-900 for Week 5"
+      ],
+      "ai": "Nothing yet. Get the environments standing up first.",
+      "checkpoint": "Environments live, PL-900 booked, spine project named.",
+      "note": "Do not start the Copilot Studio or Power Pages trials yet. They are timed — Week 17 and Week 20."
+    },
+    {
+      "n": 1,
+      "phase": 1,
+      "title": "Platform orientation & environments",
+      "intent": "Get oriented, and turn a vague ambition into a written brief you can build against.",
+      "learn": [
+        "PL-900 paths: business value and core components",
+        "Skim the PL-900T00-A course outline as your four-week roadmap"
+      ],
+      "watch": [
+        "April Dunnam — Power Platform overview (2026 content only)",
+        "Microsoft Power Platform official channel — current platform tour"
+      ],
+      "build": [
+        "Create your DEV environment; note its type, region and Dataverse status",
+        "Explore the Maker Portal, Admin Center and platform analytics",
+        "List ten manual processes at your work this platform could solve — pick your spine project from them"
+      ],
+      "ai": "Have an AI assistant play requirements analyst and ask you ten clarifying questions about your spine project. Answer them. That transcript is your brief.",
+      "checkpoint": "One-page project brief: scope, users, and the top five things it must do."
+    },
+    {
+      "n": 2,
+      "phase": 1,
+      "title": "Dataverse: tables, columns, relationships",
+      "intent": "Model the data before you build anything pretty. This is the decision you live with for years.",
+      "learn": [
+        "Get started with Microsoft Dataverse",
+        "Create tables in Dataverse"
+      ],
+      "watch": [
+        "Shane Young — Dataverse table basics",
+        "Lisa Crosbie — Dataverse for beginners"
+      ],
+      "build": [
+        "Model your tables on paper first — entities, keys, cardinality — before touching the maker portal",
+        "Build 5–7 tables with correct column types (choice vs lookup vs text is the one you'll regret)",
+        "Create 1:N and N:N relationships; understand cascade behaviour on delete",
+        "Load 50+ rows of realistic sample data"
+      ],
+      "ai": "Paste your schema into an AI assistant and ask it to critique it specifically as a Dataverse model — normalisation, choice vs lookup, relationship limits. Then have it generate 100 rows of realistic CSV for your domain and import them.",
+      "checkpoint": "An ERD you drew, plus a working schema with sample data in it."
+    },
+    {
+      "n": 3,
+      "phase": 1,
+      "title": "Dataverse logic: keys, business rules, rollups",
+      "intent": "Learn where business logic belongs. Most people put it in the wrong layer for years.",
+      "learn": [
+        "Dataverse business logic: business rules, calculated columns, rollup columns, alternate keys"
+      ],
+      "watch": [
+        "Search: Dataverse business rules",
+        "Search: Dataverse rollup columns — Shane Young, Andrew Hess"
+      ],
+      "build": [
+        "Add calculated columns (days open, total cost)",
+        "Add a rollup column and learn its 12-hour recalculation lag the easy way",
+        "Write three business rules — visibility, required, default value",
+        "Build four custom views with real filtering and sorting",
+        "Set up alternate keys for integration-safe upserts"
+      ],
+      "ai": "Describe a rule in plain English and ask whether it belongs in a business rule, calculated column, real-time workflow or cloud flow — and why. Verify against docs; AI misses Dataverse edge cases fairly often.",
+      "checkpoint": "A 300-word explainer: business rule vs calculated column vs flow. AB-410 topic and a real interview question."
+    },
+    {
+      "n": 4,
+      "phase": 1,
+      "title": "Security model",
+      "intent": "The topic separating people who can build a demo from people who can deploy to an enterprise.",
+      "learn": [
+        "Dataverse security: business units, roles, teams, column-level security, hierarchy security, sharing"
+      ],
+      "watch": [
+        "Search: Dataverse security roles explained (2025–2026 only — business unit behaviour changed)"
+      ],
+      "build": [
+        "Create three roles: Requester, Fulfiller, Manager",
+        "Set privilege depth correctly for each — User / BU / Parent-Child / Organization",
+        "Apply column-level security to one sensitive field",
+        "Create a second user account and actually log in as them to test"
+      ],
+      "ai": "Have AI quiz you on PL-900 objectives — 25 scenario questions cold, then explanations for every miss, then five harder ones on your weakest domain.",
+      "checkpoint": "Security matrix documented (role × table × privilege), verified by real login testing."
+    },
+    {
+      "n": 5,
+      "phase": 1,
+      "title": "PL-900 exam week",
+      "exam": "PL-900",
+      "intent": "Sit the exam. Then map the rest of the plan against the AB-410 objectives.",
+      "learn": [
+        "Official PL-900 practice assessment on the Microsoft Learn credential page",
+        "Read the AB-410 study guide end to end — to map, not to study"
+      ],
+      "build": [
+        "Light review Monday to Wednesday",
+        "Sit PL-900 Thursday or Friday",
+        "Annotate every AB-410 objective with the week that covers it"
+      ],
+      "ai": "Ask AI to turn the AB-410 study guide into a checklist of discrete, testable skills. That checklist is your Week 16 self-assessment.",
+      "checkpoint": "PL-900 passed. Annotated AB-410 objective map."
+    },
+    {
+      "n": 6,
+      "phase": 2,
+      "title": "Model-driven apps",
+      "intent": "Model-driven first, deliberately. It forces you to work with the data model rather than around it.",
+      "learn": [
+        "Create a model-driven app with Dataverse",
+        "Optional: PL-7003 Applied Skill — model-driven apps"
+      ],
+      "watch": [
+        "Lisa Crosbie — model-driven app series (strong on the why, not just the click path)"
+      ],
+      "build": [
+        "Full model-driven app for your spine project's back office",
+        "Main form with tabs, sections and a proper header",
+        "Quick create form and quick view form",
+        "Sub-grids showing related records",
+        "Sitemap with sensible areas, groups and subareas",
+        "Custom view plus a chart on the main table"
+      ],
+      "ai": "Ask AI to review your form design for data-entry usability — field grouping, tab order, cognitive load. Implement two suggestions.",
+      "checkpoint": "An app someone else could navigate without you explaining it."
+    },
+    {
+      "n": 7,
+      "phase": 2,
+      "title": "Business process flows",
+      "intent": "BPFs and business rules are old and unglamorous, and they carry real weight on AB-410.",
+      "learn": [
+        "Business process flows, form-level business rules, embedded canvas apps"
+      ],
+      "watch": [
+        "Search: business process flows Power Platform — cover the maker experience and the tables BPFs create"
+      ],
+      "build": [
+        "A BPF for your request lifecycle with stage-gating conditions",
+        "Form-level business rules that show and hide by stage",
+        "One embedded canvas app on a form",
+        "An editable grid on a sub-grid"
+      ],
+      "ai": "Ask AI to explain the table a BPF generates in Dataverse and why that matters for reporting and security. Verify against docs.",
+      "checkpoint": "Working BPF with stage-gated required fields, plus a written note on what it creates behind the scenes."
+    },
+    {
+      "n": 8,
+      "phase": 2,
+      "title": "Canvas apps & Power Fx",
+      "intent": "Delegation is the number one real-world canvas app failure and the thing juniors never check.",
+      "learn": [
+        "Create a canvas app in Power Apps",
+        "Power Fx formula reference",
+        "Optional: PL-7001 Applied Skill — canvas apps"
+      ],
+      "watch": [
+        "Reza Dorrani — canvas fundamentals and Power Fx",
+        "Shane Young — same ground, slower pace"
+      ],
+      "build": [
+        "Canvas app on your Dataverse tables",
+        "Gallery with search, sort and filter using delegable functions",
+        "Form with SubmitForm, Patch, validation and error handling",
+        "Set vs UpdateContext vs collections — know when each is correct",
+        "Navigation across four or more screens"
+      ],
+      "ai": "Feed your Power Fx to AI for delegation and performance review — but verify every suggestion. Models routinely invent Power Fx functions that don't exist or confuse it with Excel.",
+      "checkpoint": "Zero delegation warnings against a 2,000+ row table."
+    },
+    {
+      "n": 9,
+      "phase": 2,
+      "title": "Responsive design, components, performance",
+      "intent": "Rebuild it properly. Containers, reusable components, and a load time you'd accept yourself.",
+      "learn": [
+        "Canvas components, responsive layouts, performance optimisation"
+      ],
+      "watch": [
+        "Reza Dorrani — responsive design and reusable components",
+        "Search: Power Apps performance optimization"
+      ],
+      "build": [
+        "Rebuild responsive — containers, no absolute positioning",
+        "Two reusable components with custom input and output properties",
+        "A component library, consumed by your app",
+        "Optimise: concurrent loading, less OnStart work, App.StartScreen, fewer controls",
+        "Device features: camera, barcode scanner, GPS"
+      ],
+      "ai": "Have AI generate a Power Fx theme object — colours, spacing, type scale — and apply it globally. Tedious, well-specified, easily verified. Good AI work.",
+      "checkpoint": "Loads in under 3 seconds and works on your actual phone."
+    },
+    {
+      "n": 10,
+      "phase": 2,
+      "title": "Connectors & integration",
+      "intent": "Connection references matter now because Week 24's ALM work depends on them.",
+      "learn": [
+        "Connectors and data sources",
+        "Introduction to custom connectors"
+      ],
+      "watch": [
+        "Search: Power Apps custom connector — Reza Dorrani, Damien Bird"
+      ],
+      "build": [
+        "Connect to SharePoint and Office 365 Users",
+        "Build one custom connector against a public REST API",
+        "Understand connection references properly",
+        "Write down your answer to: when should data live in SharePoint vs Dataverse?"
+      ],
+      "ai": "Give AI an OpenAPI spec, have it explain each operation and draft the connector definition. Import and test it.",
+      "checkpoint": "A working custom connector used in both an app and a flow."
+    },
+    {
+      "n": 11,
+      "phase": 2,
+      "title": "Real users",
+      "intent": "No new material. This is the week a study project becomes a work project.",
+      "build": [
+        "Put the app in front of two or three actual colleagues",
+        "Watch them use it without helping — do not explain, do not defend",
+        "Fix the top five problems they hit",
+        "Write a short user guide"
+      ],
+      "ai": "Feed your observation notes to AI and ask it to sort the issues into UX, data model and training problems. The sorting is the point — each needs a different fix.",
+      "checkpoint": "Three real users have used it. Bug list written, top five fixed.",
+      "note": "Slack week. If you're behind, this is where you catch up."
+    },
+    {
+      "n": 12,
+      "phase": 3,
+      "title": "Cloud flows: triggers, actions, expressions",
+      "intent": "Trigger conditions and filtering attributes. Skip them and you will build an infinite loop — everyone does this once.",
+      "learn": [
+        "Create flows in Power Automate",
+        "Optional: PL-7002 Applied Skill — automated processes"
+      ],
+      "watch": [
+        "Damien Bird and Reza Dorrani — both exceptional here",
+        "Search: Power Automate triggers explained / expressions"
+      ],
+      "build": [
+        "Automated flow on row create/update using filtering attributes and trigger conditions",
+        "Instant flow triggered from your canvas app",
+        "Scheduled flow for a weekly digest",
+        "Master: formatDateTime, addDays, if, coalesce, outputs, body, first, length",
+        "Parse JSON from an HTTP action"
+      ],
+      "ai": "Describe a transformation in plain English, get the expression. Genuinely strong AI use case — expression syntax is fiddly. Still test every one.",
+      "checkpoint": "Four working flows, including one whose trigger condition correctly prevents self-triggering."
+    },
+    {
+      "n": 13,
+      "phase": 3,
+      "title": "Approvals & error handling",
+      "intent": "Flows that survive contact with reality. Resilience thinking is a seniority marker rarely taught in tutorials.",
+      "learn": [
+        "Approvals, error handling patterns, scope and run-after configuration"
+      ],
+      "watch": [
+        "Search: Power Automate error handling try catch",
+        "Search: Power Automate approvals advanced"
+      ],
+      "build": [
+        "Multi-stage approval routing with a threshold branch",
+        "Try / Catch / Finally using Scopes with configured run-after",
+        "Retry policies and a terminate action with a meaningful message",
+        "Adaptive card approval posted to Teams",
+        "SLA escalation: unapproved after three business days, escalate"
+      ],
+      "ai": "Give AI a flow with no error handling and ask it to design a resilience strategy — what retries, what fails loudly, what degrades gracefully. Implement it.",
+      "checkpoint": "A flow that fails gracefully and tells someone useful. Break it deliberately and confirm."
+    },
+    {
+      "n": 14,
+      "phase": 3,
+      "title": "Child flows, HTTP, desktop flows",
+      "intent": "PL-500 retired but desktop flows are alive. Learn them because your workplace has legacy systems, not for a badge.",
+      "learn": [
+        "Child flows, solution-aware flows, Power Automate Desktop basics"
+      ],
+      "watch": [
+        "Damien Bird — child flows and reusable patterns",
+        "Search: Power Automate Desktop tutorial 2026"
+      ],
+      "build": [
+        "A child flow for a reusable operation, called from three parents",
+        "Direct Dataverse Web API calls via HTTP with Azure AD auth",
+        "One desktop flow automating a genuinely legacy task",
+        "Apply to each with concurrency tuning — and know when concurrency breaks your logic"
+      ],
+      "ai": "Ask AI to review your flow architecture for coupling: which flows break if the data model changes? Refactor the worst one.",
+      "checkpoint": "A child flow consumed by three parents, and a working desktop flow."
+    },
+    {
+      "n": 15,
+      "phase": 3,
+      "title": "Business logic architecture",
+      "intent": "Where does each piece of logic belong? Most consultants can't answer this in writing. You will.",
+      "learn": [
+        "Dataverse plug-ins (conceptual), real-time vs background workflows, the full decision framework"
+      ],
+      "watch": [
+        "Search: Dataverse plugins vs flows — you want the architectural decision, not the C#"
+      ],
+      "build": [
+        "Document a decision tree: for every piece of logic in your solution, which layer and why",
+        "Refactor two pieces you put in the wrong place back in Phase 1"
+      ],
+      "ai": "Present three scenarios and ask for recommendations with tradeoffs — latency, transaction scope, licensing, maintainability. Argue back where you disagree. The disagreement is the exercise.",
+      "checkpoint": "A written business logic decision matrix. Genuinely SME-level output."
+    },
+    {
+      "n": 16,
+      "phase": 3,
+      "title": "Buffer & consolidation",
+      "intent": "Deliberate slack. If you're on schedule, bank credentials. If you're behind, you're now caught up.",
+      "build": [
+        "Rebuild your weakest Phase 2 component with what you know now",
+        "Sit the free PL-7001, PL-7002 and PL-7003 Applied Skills assessments",
+        "Score yourself 1–5 against every AB-410 objective"
+      ],
+      "ai": "Have AI generate a 40-question mixed practice set from the AB-410 study guide, weighted toward your low scores.",
+      "checkpoint": "Honest self-assessment against every AB-410 objective."
+    },
+    {
+      "n": 17,
+      "phase": 4,
+      "title": "Power Pages foundations",
+      "intent": "The product most people skip — which is exactly why knowing it well pays.",
+      "trial": "Start your Power Pages trial now (30 days, renewable).",
+      "learn": [
+        "Get started with Power Pages",
+        "Demonstrate the capabilities of Microsoft Power Pages"
+      ],
+      "watch": [
+        "Dhruvin Shah — the most complete Power Pages content on YouTube",
+        "Search: Power Pages tutorial 2026"
+      ],
+      "build": [
+        "Provision a site from a template",
+        "Design Studio: pages, sections, navigation, styling, theming",
+        "Basic forms and lists bound to your Dataverse tables",
+        "Publish, then view it as an anonymous user"
+      ],
+      "ai": "Ask AI to draft the information architecture for your portal — what an external submitter sees, in what order, with what expectations set at each step.",
+      "checkpoint": "A published site rendering live Dataverse data."
+    },
+    {
+      "n": 18,
+      "phase": 4,
+      "title": "Portal security & table permissions",
+      "intent": "The week that matters. Portal security is where organisations get hurt.",
+      "learn": [
+        "Work with Power Pages websites — authentication, table permissions, web roles"
+      ],
+      "build": [
+        "Configure authentication plus at least one external identity provider",
+        "Table permissions: Global, Contact, Account, Parent, Self — know each precisely",
+        "Web roles and page permissions",
+        "Multistep forms with save-and-resume",
+        "Log in as user A and try to reach user B's record by editing the URL. It must fail."
+      ],
+      "ai": "Describe your table permission config and ask AI to find data exposure risks — then verify each manually. Don't outsource the conclusion; a confident wrong answer here is expensive.",
+      "checkpoint": "A written security test log: 8+ access scenarios, expected result, actual result."
+    },
+    {
+      "n": 19,
+      "phase": 4,
+      "title": "Liquid, Web API, custom code",
+      "intent": "Turn a content site into a real web application.",
+      "learn": [
+        "Extend Power Pages — Liquid, Web API, ALM"
+      ],
+      "watch": [
+        "Dhruvin Shah — Liquid templates and Portal Web API in depth"
+      ],
+      "build": [
+        "Liquid templates rendering Dataverse data — fetchxml, entitylist, entityview",
+        "Portal Web API calls for client-side create and update",
+        "Custom JavaScript form validation",
+        "A Power Automate flow triggered by a portal submission",
+        "Custom CSS matched to your organisation's brand"
+      ],
+      "ai": "Have AI generate Liquid for a specific rendering need, then explain the security implications of every tag used. Liquid can expose data if used carelessly.",
+      "checkpoint": "External submission writes to Dataverse, triggers a flow, notifies your team. End to end."
+    },
+    {
+      "n": 20,
+      "phase": 5,
+      "title": "Copilot Studio foundations",
+      "intent": "The centre of gravity of the platform in 2026. Treat these four weeks as the most career-relevant here.",
+      "trial": "Start your Copilot Studio trial now (60 days).",
+      "learn": [
+        "Copilot Studio fundamentals: agents, topics, knowledge sources, actions",
+        "AI Builder and AI Hub: prompts, models, prebuilt models — AB-410 objectives"
+      ],
+      "watch": [
+        "Nick DeCourcy (Bright Ideas Agency) — Copilot Studio depth",
+        "Daniel Christian — focused agent tutorials",
+        "Lisa Crosbie — Copilot inside apps"
+      ],
+      "build": [
+        "An agent for your spine project with five or more authored topics",
+        "Knowledge sources: a SharePoint site, a public URL, uploaded documents",
+        "Actions calling your existing Power Automate flows",
+        "Generative answers with scoped, well-written instructions",
+        "Publish to Teams and test with a real colleague"
+      ],
+      "ai": "Iterate the agent's instructions with AI: draft, test against ten real user questions, feed failures back, revise. Prompt engineering is an AB-620 measured skill and this is how you learn it.",
+      "checkpoint": "A published agent answering real questions about your data."
+    },
+    {
+      "n": 21,
+      "phase": 5,
+      "title": "AB-410 exam week",
+      "exam": "AB-410",
+      "intent": "Broad exam. Expect scenario clusters and more weight on BPFs and business rules than you'd guess.",
+      "learn": [
+        "AB-410 study guide, three domains — target your lowest Week 16 scores"
+      ],
+      "build": [
+        "Focused review Monday to Wednesday",
+        "Sit AB-410 Thursday or Friday"
+      ],
+      "ai": "Have AI drill you on scenario questions in the exam's style — multi-part, linked to a single business situation, rather than isolated facts.",
+      "checkpoint": "AB-410 passed.",
+      "note": "Microsoft Learn is available inside the exam. Safety net, not a strategy. Retakes allowed after 24 hours, but use the score report to rebuild first."
+    },
+    {
+      "n": 22,
+      "phase": 5,
+      "title": "MCP, multi-agent, Foundry",
+      "intent": "AB-620 territory and the genuine frontier of the platform.",
+      "learn": [
+        "AB-620 study guide: plan and configure, integrate and extend, test and manage"
+      ],
+      "build": [
+        "Connect your agent to an MCP server as a tool source",
+        "Build a second specialist agent and configure agent-to-agent handoff",
+        "Custom connectors and API actions as agent tools",
+        "Adaptive cards for structured responses",
+        "A custom prompt from the Microsoft Foundry model catalog",
+        "Explore computer use for a UI-driven task"
+      ],
+      "ai": "Use AI to design the decomposition — which capabilities belong in which agent, and what the handoff contract looks like. Reasoning about boundaries out loud is how you get good at this.",
+      "checkpoint": "Two agents, one MCP tool integration, one working A2A handoff."
+    },
+    {
+      "n": 23,
+      "phase": 5,
+      "title": "Agent evaluation & testing",
+      "intent": "Almost nobody does this part. That is exactly why it differentiates you.",
+      "learn": [
+        "AB-620 domain three: test sets, evaluation methods, Application Insights, solutions and pipelines"
+      ],
+      "build": [
+        "A test set of 30+ representative utterances with expected outcomes",
+        "Run evaluations, review results, iterate on instructions and knowledge",
+        "Wire up Application Insights for agent telemetry",
+        "Package the agent into a solution with environment variables — no hardcoded values",
+        "Deploy DEV to TEST via Power Platform Pipelines"
+      ],
+      "ai": "Ask AI for 40 adversarial utterances — ambiguous phrasing, out-of-scope requests, prompt injection attempts, hostile users. Run them. Fix what breaks. This is agent red-teaming, a real skill in short supply.",
+      "checkpoint": "Evaluation results before and after one iteration cycle, showing measured improvement."
+    },
+    {
+      "n": 24,
+      "phase": 6,
+      "title": "ALM, governance & the rebuild",
+      "exam": "AB-620",
+      "intent": "The capstone. Package everything properly and ship it through a pipeline.",
+      "learn": [
+        "ALM for Power Platform, solutions, Power Platform Pipelines",
+        "CoE Starter Kit, DLP policies, environment strategy"
+      ],
+      "watch": [
+        "Search: Power Platform ALM pipelines 2026",
+        "Search: Power Platform CoE Starter Kit"
+      ],
+      "build": [
+        "Package everything as a managed solution with proper publisher and prefix",
+        "Externalise every connection reference and environment variable — zero hardcoded values",
+        "Full DEV to TEST to PROD deployment via pipelines",
+        "Apply a DLP policy and document its impact on your solution",
+        "Install the CoE Starter Kit in a sandbox and explore what it surfaces",
+        "Write an architecture decision record covering every significant choice across 24 weeks",
+        "Sit AB-620 this week or next, depending on how Weeks 22–23 went"
+      ],
+      "ai": "Have AI interrogate your architecture decision record — for each decision, ask it to argue the opposing choice. Where you can't defend yourself, you've found a gap.",
+      "checkpoint": "Deployed to PROD through a pipeline. ADR written. Real users using it."
+    }
+  ],
+  "PHASES": [
+    {
+      "id": 0,
+      "name": "Setup",
+      "short": "SETUP",
+      "weeks": [
+        0
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Foundations & Dataverse",
+      "short": "DATAVERSE",
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Power Apps",
+      "short": "APPS",
+      "weeks": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Power Automate",
+      "short": "AUTOMATE",
+      "weeks": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Power Pages",
+      "short": "PAGES",
+      "weeks": [
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Copilot Studio & AI",
+      "short": "AGENTS",
+      "weeks": [
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ALM & Governance",
+      "short": "ALM",
+      "weeks": [
+        24
+      ]
+    }
+  ],
+  "CERTS": [
+    {
+      "code": "PL-900",
+      "name": "Power Platform Fundamentals",
+      "week": 5,
+      "status": "live"
+    },
+    {
+      "code": "AB-410",
+      "name": "Intelligent Applications Builder Associate",
+      "week": 21,
+      "status": "live"
+    },
+    {
+      "code": "AB-620",
+      "name": "AI Agent Builder Associate",
+      "week": 24,
+      "status": "live"
+    },
+    {
+      "code": "PL-400",
+      "name": "Power Platform Developer Associate",
+      "week": null,
+      "status": "optional"
+    },
+    {
+      "code": "PL-7001",
+      "name": "Applied Skill — canvas apps",
+      "week": 16,
+      "status": "optional"
+    },
+    {
+      "code": "PL-7002",
+      "name": "Applied Skill — automated processes",
+      "week": 16,
+      "status": "optional"
+    },
+    {
+      "code": "PL-7003",
+      "name": "Applied Skill — model-driven apps",
+      "week": 16,
+      "status": "optional"
+    }
+  ],
+  "RETIRED": [
+    {
+      "code": "PL-100",
+      "when": "Retired June 2024"
+    },
+    {
+      "code": "PL-500",
+      "when": "Retired 30 Jun 2026"
+    },
+    {
+      "code": "PL-600",
+      "when": "Retired 30 Jun 2026"
+    },
+    {
+      "code": "APL-7008",
+      "when": "Retired 30 Jun 2026"
+    },
+    {
+      "code": "PL-200",
+      "when": "Retires 31 Aug 2026"
+    }
+  ],
+  "LINKS": [
+    {
+      "label": "AB-410 credential",
+      "code": "AB-410",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/intelligent-applications-builder-associate/"
+    },
+    {
+      "label": "AB-410 study guide",
+      "code": "AB-410",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-410"
+    },
+    {
+      "label": "AB-620 credential",
+      "code": "AB-620",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/ai-agent-builder-associate/"
+    },
+    {
+      "label": "AB-620 study guide",
+      "code": "AB-620",
+      "url": "https://aka.ms/AB620-StudyGuide"
+    },
+    {
+      "label": "PL-400 credential",
+      "code": "PL-400",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/power-platform-developer-associate/"
+    },
+    {
+      "label": "PL-900 course outline",
+      "code": "PL-900",
+      "url": "https://learn.microsoft.com/en-us/training/courses/pl-900t00"
+    },
+    {
+      "label": "Power Pages — get started",
+      "code": "PAGES",
+      "url": "https://learn.microsoft.com/en-us/training/paths/power-pages-get-started/"
+    },
+    {
+      "label": "Power Pages — work with sites",
+      "code": "PAGES",
+      "url": "https://learn.microsoft.com/en-us/training/paths/work-power-pages/"
+    },
+    {
+      "label": "Power Pages — extend",
+      "code": "PAGES",
+      "url": "https://learn.microsoft.com/en-us/training/paths/extend-power-pages/"
+    },
+    {
+      "label": "Power Pages — capabilities",
+      "code": "PAGES",
+      "url": "https://learn.microsoft.com/en-us/training/paths/demonstrate-capabilities-microsoft-power-pages/"
+    }
+  ]
+}
