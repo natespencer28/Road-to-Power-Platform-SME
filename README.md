@@ -78,6 +78,7 @@ If local storage is blocked entirely (some embedded previews and locked-down bro
 |---|---|
 | `index.html` | **The app.** Self-contained — this is the only file GitHub Pages needs. |
 | `plan.json` | The curriculum: 25 weeks, phases, credentials, links. |
+| `PROJECT.md` | The spine project spec — data model, security roles, sample data. |
 | `template.html` | Page shell, styles and script, with `<!--PLACEHOLDERS-->`. |
 | `build.py` | Renders `plan.json` + `template.html` into `index.html`. |
 
@@ -127,7 +128,9 @@ Add or remove items freely; counts and percentages recalculate. Two things to ke
 - **Every week needs a `checkpoint`** — it drives week completion and the strip fill.
 - **`PHASES[].weeks` must cover 0–24 exactly**, or the strip brackets misalign.
 
-**Swapping the spine project** is the likeliest edit. The plan assumes a service request and asset tracker; if your work is inspections, onboarding, grant applications or client intake, search the `build` arrays for the request/asset language and substitute your domain. The architecture is identical.
+**The spine project** is Training & Certification Compliance — see `PROJECT.md` for the data model and build spec. Every week's `build` items name its real entities (Person, Credential, Completion, Role Requirement) rather than generic placeholders.
+
+To swap it for a different domain, rewrite the `build` arrays and rebuild. `retheme.py` shows the pattern: a dict of week-number overrides applied to `plan.json`. `plan.generic.json.bak` is the original domain-neutral version if you want to start from that instead.
 
 Prefer not to run Python? Edit `index.html` directly — the text is all there in plain markup. You'll just be editing it in two places (the visible HTML and nothing else, since the item counts derive from the DOM).
 
