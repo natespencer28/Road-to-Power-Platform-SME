@@ -1,0 +1,5 @@
+Provider Code,Provider Name,Email,Phone,Delivery Mode
+PROV-001,Northgate Safety Training,bookings@northgate-training.example,0100 555 0142,Classroom
+PROV-002,Meridian Skills Academy,enquiries@meridian-skills.example,0100 555 0198,Classroom
+PROV-003,SafeStart Online,support@safestart-online.example,,E-learning
+PROV-004,In-house Training Team,training@yourcompany.example,,Internal

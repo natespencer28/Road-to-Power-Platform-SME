@@ -1,0 +1,9 @@
+Employee Code,First Name,Last Name,Email,Role Code,Manager Code,Start Date
+EMP-001,Dana,Whitfield,dana.whitfield@example.com,ROLE-003,,2017-11-08
+EMP-002,Marcus,Oyelaran,marcus.oyelaran@example.com,ROLE-003,,2018-09-04
+EMP-003,Priya,Raghavan,priya.raghavan@example.com,ROLE-001,EMP-001,2020-01-17
+EMP-004,Tomas,Lindqvist,tomas.lindqvist@example.com,ROLE-001,EMP-001,2021-05-31
+EMP-005,Aisha,Bello,aisha.bello@example.com,ROLE-001,EMP-001,2022-07-05
+EMP-006,Grant,Mullins,grant.mullins@example.com,ROLE-002,EMP-002,2020-11-12
+EMP-007,Sofia,Marchetti,sofia.marchetti@example.com,ROLE-002,EMP-002,2023-01-21
+EMP-008,Kwame,Asare,kwame.asare@example.com,ROLE-002,EMP-002,2026-06-29
